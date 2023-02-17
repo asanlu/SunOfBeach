@@ -1,0 +1,18 @@
+
+/unpackage/
+
+# dependencies
+/node_modules
+
+# misc
+.DS_Store
+npm-debug.log*
+yarn-error.log
+
+.idea
+yarn.lock
+package-lock.json
+*bak
+.vscode
+.hbuilderx
+.project
