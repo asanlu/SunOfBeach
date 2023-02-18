@@ -6,7 +6,8 @@ import {
 // 获取动态列表
 export const uploadImg = (params = {}) => {
     const ltype = params.type || 'recommend'
-    return request(`/ct/moyu/list/${ltype}/${1}`, {
+    return request(`/oss/image/mo_yu`, {
+        method: 'POST',
         data: params.data,
     });
 }

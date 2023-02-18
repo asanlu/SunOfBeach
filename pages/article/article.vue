@@ -19,7 +19,7 @@
                     <scroll-view scroll-y style="height: 100%;">
                         <template v-for="(content,idx) in contentList" :key="idx">
                             <uni-list>
-                                <uni-list-item class="content-list" :title="content.title" direction="column" c
+                                <uni-list-item class="content-list" :title="content.title" direction="column"
                                     :to="`/pages/article/article-detail?id=${content.id}`">
                                     <template v-slot:footer>
                                         <!-- <text class="content-head">{{content.title}}</text> -->

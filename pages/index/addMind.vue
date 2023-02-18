@@ -48,16 +48,19 @@
         },
         methods: {
             commitMind() {
-
+                return {
+                    textVal: this.textVal,
+                    topicId: this.topicId
+                }
             },
             // 获取上传状态
             select(e) {
                 const tempFilePaths = e.tempFilePaths;
                 console.log('选择文件：', e)
                 uni.uploadFile({
-                    url: 'https://www.example.com/upload', //仅为示例，非真实的接口地址
+                    url: 'https://api.sunofbeaches.com/oss/image/mo_yu',
                     filePath: tempFilePaths[0],
-                    name: 'file',
+                    name: 'image',
                     // formData: {
                     //     'user': 'test'
                     // },

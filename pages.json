@@ -47,6 +47,23 @@
             }
             
         }
+        ,{
+            "path" : "pages/faq/faq",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "问答",
+                "enablePullDownRefresh": true
+            }
+            
+        },{
+            "path" : "pages/faq/faq-detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
     "globalStyle": {
         "navigationBarTextStyle": "white",
@@ -72,6 +89,11 @@
             "iconPath": "static/art.png",
             "selectedIconPath": "static/artc.png",
             "text": "文章"
+        },{
+            "pagePath": "pages/faq/faq",
+            "iconPath": "static/art.png",
+            "selectedIconPath": "static/artc.png",
+            "text": "问答"
         }, {
             "pagePath": "pages/user/user",
             "iconPath": "static/hot.png",
