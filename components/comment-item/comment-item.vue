@@ -2,8 +2,7 @@
     <uni-list :border="false">
         <uni-list-item :border="false" :title="info.nickname" :note="info.position" :thumb="info.avatar" thumb-size="lg"
             :rightText="info.createTime" />
-        <uni-list-item :border="false" ellipsis="2" :title="info.content" clickable
-            @click="addComment(info.id)" />
+        <uni-list-item :border="false" :ellipsis="ellip" :title="info.content" clickable @click="addComment(info.id)" />
         <uni-list-item :border="false" direction="column">
             <template v-slot:body>
                 <view v-if="info.images">
@@ -16,7 +15,7 @@
                 <view class="comment-item-link" v-if="info.linkUrl">
                     <uni-icons class="comment-item-licon" type="link" size="30" color="#aac7f7"></uni-icons>
                     <view class="comment-link-url">
-                        <text>{{info.linkTitle}}</text><br/>
+                        <text>{{info.linkTitle}}</text><br />
                         <uni-link :text="info.linkUrl" :showUnderLine="false" fontSize='10'></uni-link>
                     </view>
                 </view>
@@ -43,7 +42,7 @@
                 </view>
             </template>
         </uni-list-item>
-        <uni-list-item s="顶线"/>
+        <uni-list-item s="顶线" />
     </uni-list>
 
 
@@ -54,14 +53,19 @@
         name: "comment-item",
         emits: ['comment'],
         props: {
-            info: Object
+            info: Object,
+            config: Object,
+            ellip: Number,
         },
         methods: {
             addComment(id) {
-            // console.log('...inner list info.', this.info)
-                this.$emit('comment', {...this.info});
+                // if (hasClick) return;
+                // console.log('...inner list info.', this.info)
+                this.$emit('comment', {
+                    ...this.info
+                });
                 uni.navigateTo({
-                	url: `/pages/comment-detail/comment-detail?id=${id}`
+                    url: `/pages/comment-detail/comment-detail?id=${id}`
                 });
             }
         }
@@ -107,7 +111,8 @@
         font-size: 12px;
         background-color: rgba(195, 195, 195, .8);
     }
-    .comment-item-licon{
+
+    .comment-item-licon {
         transform: rotate(-45deg);
     }
 

@@ -1,7 +1,8 @@
 <template>
     <template v-for="(item,index) in commList" :key="index">
-        <comment-item class="comment-row" :info="item" @comment="saveCurComment"></comment-item>
+        <comment-item class="comment-row" :info="item" :ellip="2" @comment="saveCurComment"></comment-item>
     </template>
+    <uni-fab horizontal="right" vertical="bottom" :popMenu="false" @fabClick="triggerNew"></uni-fab>
 </template>
 
 <script>
@@ -27,6 +28,11 @@
             saveCurComment(e) {
                 // console.log('log event data', e);
                 store.commit('updateCurComment', e)
+            },
+            triggerNew() {
+                uni.navigateTo({
+                    url: './addMind'
+                })
             }
         },
         onPullDownRefresh() {

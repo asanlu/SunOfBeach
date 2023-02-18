@@ -4,9 +4,11 @@
             <uni-list-item class="content-list" :border="false" :title="info.nickname" :note="info.position"
                 :thumb="info.avatar" thumb-size="lg" :rightText="info.createTime" />
         </uni-list>
-        <uni-title type="h2" :title="info.title"></uni-title>
-        <image style="width:100%" v-if="info.covers" :src="info.covers[0]" mode="widthFix"></image>
-        <rich-text class="desc" :nodes="info.content"></rich-text>
+        <view class="rich-content">
+            <uni-title type="h2" :title="info.title"></uni-title>
+            <image style="width:100%" v-if="info.covers" :src="info.covers[0]" mode="widthFix"></image>
+            <rich-text class="desc" :nodes="info.content"></rich-text>
+        </view>
         <!-- 个人类目不支持webview 
         <web-view :webview-styles="webviewStyles" :src="`https://www.sunofbeach.net/a/1624287020915548162`"></web-view> -->
     </view>
@@ -66,7 +68,12 @@
 <style lang="scss">
     .rich-wrap {
         background-color: #fff;
+        padding-bottom: 60px;
     }
+    .rich-content{
+        padding: 0 10px;
+    }
+    
 
     .desc {
         img {
