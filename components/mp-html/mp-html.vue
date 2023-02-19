@@ -43,7 +43,8 @@ import node from './node/node'
 import Parser from './parser'
 import markdown from './markdown/index.js'
 import highlight from './highlight/index.js'
-const plugins=[markdown,highlight,]
+import style from './style/index.js'
+const plugins=[markdown,highlight,style,]
 // #ifdef APP-PLUS-NVUE
 const dom = weex.requireModule('dom')
 // #endif

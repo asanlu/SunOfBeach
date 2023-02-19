@@ -37,33 +37,41 @@
                 "navigationBarTitleText": "我的",
                 "enablePullDownRefresh": false
             }
-        }
-        ,{
-            "path" : "pages/index/addMind",
-            "style" :                                                                                    
-            {
+        }, {
+            "path": "pages/user/login",
+            "style": {
+                "navigationBarTitleText": "登录",
+                "enablePullDownRefresh": false
+            }
+        }, {
+            "path": "pages/index/addMind",
+            "style": {
                 "navigationBarTitleText": "风暴",
                 "enablePullDownRefresh": false
             }
-            
-        }
-        ,{
-            "path" : "pages/faq/faq",
-            "style" :                                                                                    
-            {
+
+        }, {
+            "path": "pages/faq/faq",
+            "style": {
                 "navigationBarTitleText": "问答",
                 "enablePullDownRefresh": true
             }
-            
-        },{
-            "path" : "pages/faq/faq-detail",
-            "style" :                                                                                    
-            {
+
+        }, {
+            "path": "pages/faq/faq-detail",
+            "style": {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
-            
-        }
+
+        }, {
+            "path": "pages/user/register",
+            "style": {
+                "navigationBarTitleText": "注册",
+                "enablePullDownRefresh": false
+            }
+
+        },
     ],
     "globalStyle": {
         "navigationBarTextStyle": "white",
@@ -89,13 +97,13 @@
             "iconPath": "static/art.png",
             "selectedIconPath": "static/artc.png",
             "text": "文章"
-        },{
+        }, {
             "pagePath": "pages/faq/faq",
             "iconPath": "static/art.png",
             "selectedIconPath": "static/artc.png",
             "text": "问答"
         }, {
-            "pagePath": "pages/user/user",
+            "pagePath": "pages/user/login",
             "iconPath": "static/hot.png",
             "selectedIconPath": "static/hotc.png",
             "text": "我的"
